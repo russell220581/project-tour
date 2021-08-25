@@ -1,0 +1,71 @@
+/* Footer Area CSS */
+.footer {
+    background-color: var(--bg1);
+    padding: 5rem 0 4rem;
+    margin: 3rem 0 0;
+
+    &__wrap {
+        display: grid;
+        grid-gap: 2.5rem;
+        align-items: center;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__widget {
+
+        h3 {
+            color: var(--text1);
+            font-size: 2.5rem;
+        }
+
+        .footer-links {
+            margin: 1rem 0 0;
+
+            li {
+                margin: 0.5rem 0;
+                padding: 0.5rem 0;
+
+                a {
+                    color: var(--text2);
+                    font-size: 1.6rem;
+                    
+                    i {
+                        color: var(--primary);
+                        margin-right: 0.8rem;
+                    }
+
+                    &:hover {
+                        i {
+                            padding-right: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__credit {
+        border-top: 0.1rem solid var(--text2);
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        text-align: center;
+
+        p {
+            color: var(--text2);
+            font-size: 1.3rem;
+            font-weight: 400;
+
+            a {
+                color: var(--primary);
+            }
+        }
+    }
+}

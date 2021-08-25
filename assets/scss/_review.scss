@@ -1,0 +1,36 @@
+/* Review Area CSS */
+.review {
+    &__item {
+        background-color: var(--bg1);
+        text-align: center;
+        padding: 3rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--box-shadow);
+
+        img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+        }
+
+        h3 {
+            color: var(--text1);
+            font-size: 2.5rem;
+            padding: 1rem 0;
+        }
+
+        p {
+            color: var(--text2);
+            font-size: 1.6rem;
+        }
+
+        .stars {
+            margin-top: 1.5rem;
+
+            i {
+                color: var(--primary);
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

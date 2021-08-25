@@ -1,0 +1,64 @@
+/* Packages Area CSS */
+.package {
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+        grid-gap: 2.5rem;
+    }
+
+    &__item {
+        background-color: var(--bg1);
+        padding: 1.5rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 0.5rem;
+    }
+
+    &__image {
+        position: relative;
+        height: 25rem;
+
+        img {
+            border-radius: 0.5rem;
+        }
+
+        h3 {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: 300;
+            padding: 0.5rem 2rem;
+            border-radius: 0.5rem;
+
+            i {
+                color: var(--primary);
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 1rem;
+
+        .price {
+            color: var(--text1);
+            font-size: 2.2rem;
+            font-weight: 600;
+
+            span {
+                color: var(--text2);
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-decoration: line-through;
+            }
+        }
+
+        p {
+            color: var(--text2);
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 0.5rem 0;
+        }
+    }
+}

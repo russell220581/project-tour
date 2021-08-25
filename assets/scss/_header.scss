@@ -1,0 +1,198 @@
+/* Header Area CSS */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg1);
+    padding: 1.5rem 0;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text1);
+            
+            i {
+                color: var(--primary);
+            }
+        }
+
+        .search-form {
+            background-color: var(--bg2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50rem;
+            height: 4rem;
+            border-radius: 0.3rem;
+
+            input {
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                color: var(--text2);
+                font-size: 1.5rem;
+                font-weight: 300;
+                padding: 0 1rem;
+                text-transform: none;
+            }
+
+            label {
+                color: var(--text2);
+                font-size: 2rem;
+                margin-right: 1.5rem;
+                cursor: pointer;
+            }
+
+            @include breakpoint-down(medium) {
+                position: absolute;
+                top: 115%;
+                right: 2rem;
+                background-color: var(--bg1);
+                width: 92%;
+                box-shadow: var(--box-shadow);
+                transform: scale(0);
+                transform-origin: top right;
+            }
+
+            &.active {
+                transform: scale(1);
+            }
+        }
+
+        .icons {
+            div {
+                width: 4rem;
+                height: 4rem;
+                line-height: 4rem;
+                background-color: var(--bg2);
+                color: var(--text1);
+                font-size: 2rem;
+                text-align: center;
+                margin-left: 0.5rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--primary);
+                    color: var(--white);
+                }
+            }
+
+            #search-btn {
+                @include breakpoint-up(large) {
+                    display: none;
+                }
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 115%;
+            right: 2rem;
+            background-color: var(--bg1);
+            width: 25rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--box-shadow);
+            transform: scale(0);
+            transform-origin: top right;
+
+            &.active {
+                transform: scale(1);
+            }
+
+            a {
+                display: block;
+                padding: 1rem;
+                margin: 1rem;
+                color: var(--text1);
+                font-size: 1.6rem;
+                font-weight: 500;
+                border-radius: 0.5rem;
+
+                &:hover {
+                    background-color: var(--bg2);
+                    color: var(--primary);
+                    padding-left: 2rem;
+                }
+            }
+
+            @include breakpoint-up(large) {
+                right: 7.5%;
+            }
+
+            @include breakpoint-up(xlarge) {
+                right: 10%;
+            }
+        }
+    
+        .login-form {
+            position: absolute;
+            top: 115%;
+            right: 2rem;
+            width: 35rem;
+            padding: 2rem;
+            background-color: var(--bg1);
+            border-radius: 0.5rem;
+            box-shadow: var(--box-shadow);
+            transform: scale(0);
+            transform-origin: top right;
+
+            &.active {
+                transform: scale(1);
+            }
+
+            .input-box {
+                margin-bottom: 1rem;
+
+                span {
+                    display: block;
+                    font-size: 1.7rem;
+                    color: var(--text1);
+                }
+
+                input {
+                    background-color: var(--bg2);
+                    color: var(--text1);
+                    width: 100%;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                    text-transform: none;
+                }
+            }
+
+            .remember {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem 0;
+
+                label {
+                    color: var(--text2);
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            @include breakpoint-up(large) {
+                right: 7.5%;
+            }
+
+            @include breakpoint-up(xlarge) {
+                right: 10%;
+            }
+        }
+    
+    } 
+}

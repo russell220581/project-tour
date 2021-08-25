@@ -1,0 +1,19 @@
+/* Contact Area CSS */
+.contact {
+    &__form {
+        .form-control {
+            background-color: var(--bg1);
+            box-shadow: var(--box-shadow);
+        }
+
+        .btn {
+            margin-top: 0;   
+        }
+
+        @include breakpoint-up(medium) {
+            max-width: 70rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

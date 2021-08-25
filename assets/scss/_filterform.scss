@@ -1,0 +1,33 @@
+/* Filter Form Area CSS */
+.filter-form {
+    .form {
+        background-color: var(--bg1);
+        border-radius: 0.5rem;
+        box-shadow: var(--box-shadow);        
+        padding: 3rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.5rem;
+
+        .input-box {
+            flex: 1 1 18rem;
+
+            label {
+                display: block;
+                color: var(--text2);
+                font-size: 1.6rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 0;
+
+                @include breakpoint-up(large) {
+                    margin-top: 1rem;
+                }
+            }
+        }        
+    }
+}

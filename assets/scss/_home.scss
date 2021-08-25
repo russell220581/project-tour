@@ -1,0 +1,39 @@
+/* Home Area CSS */
+.home {
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 7rem 0 0;
+    }
+
+    &__image {
+        flex: 1 1 45rem;
+    }
+
+    &__content {
+        flex: 1 1 45rem;
+
+        h1 {
+            color: var(--text1);
+            font-size: 4rem;
+            line-height: 1.3;
+
+            @include breakpoint-down(small) {
+                font-size: 3rem;
+                line-height: 1.5;
+            }
+        }
+
+        p {
+            color: var(--text2);
+            font-size: 1.6rem;
+            padding: 1rem 0;
+        }
+
+        @include breakpoint-down(medium) {
+            text-align: center;
+        }
+    }
+}
